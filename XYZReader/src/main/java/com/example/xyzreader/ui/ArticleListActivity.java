@@ -10,6 +10,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -115,10 +117,18 @@ public class ArticleListActivity extends ActionBarActivity implements
         Adapter adapter = new Adapter(cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
-        int columnCount = getResources().getInteger(R.integer.list_column_count);
-        StaggeredGridLayoutManager sglm =
-                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(sglm);
+//        int columnCount = getResources().getInteger(R.integer.list_column_count);
+//        StaggeredGridLayoutManager sglm =
+//                new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
+        RecyclerView.LayoutManager layoutManager;
+        // Check if it's a tablet or phone device
+        if (getResources().getBoolean(R.bool.isTablet) ||
+                getResources().getBoolean(R.bool.isLand)) {
+            layoutManager = new GridLayoutManager(this, 2);
+        } else {
+            layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        }
+        mRecyclerView.setLayoutManager(layoutManager);
     }
 
     @Override
