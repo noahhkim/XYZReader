@@ -38,6 +38,7 @@ public class ObservableScrollView extends ScrollView {
         if (mCallbacks != null) {
             mCallbacks.onScrollChanged();
         }
+        
     }
 
     @Override
