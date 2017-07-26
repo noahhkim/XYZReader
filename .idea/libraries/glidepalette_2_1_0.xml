@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="glidepalette-2.1.0">
+    <CLASSES>
+      <root url="jar://C:/Android/.android/build-cache/cd1a6cb888af58b7d48a46dac6f22875a74b4337/output/jars/classes.jar!/" />
+      <root url="file://C:/Android/.android/build-cache/cd1a6cb888af58b7d48a46dac6f22875a74b4337/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../.gradle/caches/modules-2/files-2.1/com.github.florent37/glidepalette/2.1.0/455f483e9fe31a3333fb23bbfb6c37930777855a/glidepalette-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
