@@ -144,7 +144,6 @@ public class ArticleDetailFragment extends Fragment implements
         mStatusBarColorDrawable = new ColorDrawable(0);
 
         mFab = (FloatingActionButton) mRootView.findViewById(R.id.share_fab);
-
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
